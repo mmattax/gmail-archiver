@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  postgres:
+    image: "postgres:alpine"
+    environment:
+      POSTGRES_USER: gmailarchiver
+      POSTGRES_PASSWORD: gmailarchiver
+    ports:
+      - "5432:5432"
+    volumes:
+      - "pgdata:/var/lib/postgresql/data"
+
+volumes:
+  pgdata:
